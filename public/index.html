@@ -1,13 +1,19 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="index.css" />
+    <!-- Убрала слеши в теге meta -->
+    <meta charset="utf-8">
+    <!-- Добавила maximum-scale=1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
+     <!-- загрузить в браузер JavaScript-файлы, в которых эти API функции определены -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" type="text/javascript"></script>
+
   </head>
   <body>
     <div id="map"></div>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="index.js"></script>
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
+    <!-- <script src="index.js"></script> -->
   </body>
 </html>

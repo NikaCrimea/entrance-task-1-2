@@ -1,9 +1,10 @@
-import { Chart } from 'chart.js';
+import { Chart } from 'chart.js'; //проверить путь
+//import * as chart from 'chart.js'; это
 
 function getColor(isActive, alpha = 1) {
   return isActive
     ? `rgba(54, 162, 235, ${alpha})`
-    : `rgba(255, 99, 132, ${alpha})`;
+    : `rgba(255, 0, 0, ${alpha})`;
 }
 
 function getLabel(el, i, data) {
@@ -24,18 +25,19 @@ export function createChart(container, data, isActive) {
   const chart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: data.map(getLabel),
+      labels: data.map(getLabel(el, i, data)),// добавила параметры к функции и скобки ()
       datasets: [
         {
           data: data,
           borderWidth: 1,
             borderColor: borderColor,
               backgroundColor: backgroundColor
+               //scaleShowLabels : true
         }
       ]
     },
     options: {
-        legend: { 
+        legend: {
             display: false
         },
         scales: {

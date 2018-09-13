@@ -7,7 +7,7 @@ function getTableRowHtml(obj) {
     `;
 }
 
-export function getPopupContent(obj) {
+export function getPopupContent(obj) { //этой функции нет в импорте
 
     const htmlStatus = obj.isActive
         ? `<div class="station-info-active">active</div>`
@@ -22,7 +22,8 @@ export function getPopupContent(obj) {
         </div>
     `;
 
-    if (obj.isActive) {
+    if (obj.isActive && obj.drones) {
+
         const htmlRows = obj.drones.map(getTableRowHtml).join('\n');
 
         const htmlTable = `
